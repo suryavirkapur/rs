@@ -31,7 +31,15 @@ fn main() {
             Ordering::Greater => println!("Oops! Too big!"),
             Ordering::Equal => {
                 println!("Perfecto! You win boss!");
-                break;
+                let mut restart = String::new();
+                println!("Would you like to play again? [yes / no]");
+                io::stdin()
+                    .read_line(&mut restart)
+                    .expect("I was unable to read the line");
+                let restart = restart.trim().to_lowercase();
+                if restart != "yes" {
+                    break;
+                }
             }
         }
     }
