@@ -1,0 +1,8 @@
+[package]
+name = "actix"
+version = "0.2.0"
+edition = "2018"
+
+[dependencies]
+actix-web = "1.0.8" 
+serde = "1.0.126"
